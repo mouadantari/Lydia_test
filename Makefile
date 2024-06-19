@@ -17,6 +17,9 @@ stop:
 	docker stop $(CONTAINER_NAME)
 	docker rm $(CONTAINER_NAME)
 
+test:
+	pytest $(PWD)/src/test.py
+
 # Make an API request to find the 3 closest images
 # Usage: make request IMAGE_PATH=path/to/image.jpg
 request:
@@ -26,6 +29,6 @@ request:
 
 # Full workflow: build, run, and make a request
 # Usage: make full IMAGE_PATH=path/to/image.jpg
-full: build run request
+full: build run test request
 
-.PHONY: build run stop request full
+.PHONY: build run stop test request full
