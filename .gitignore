@@ -1,11 +1,7 @@
-explore.ipynb
-draft
 .lydia_py311
-.pre-commit-config.yaml
 images_to_search/
 images/
 images_copy/
 .pytest_cache
-temp.png
 __pycache__
 .DS_Store
